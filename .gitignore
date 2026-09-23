@@ -1,0 +1,13 @@
+# Fichiers d'état Terraform
+*.tfstate
+*.tfstate.*
+
+# Fichiers de sauvegarde
+*.backup
+*.bak
+
+# Fichier de verrouillage
+.terraform.lock.hcl
+
+# Répertoire local de Terraform
+.terraform/
