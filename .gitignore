@@ -2,6 +2,10 @@
 *.tfstate
 *.tfstate.*
 
+#Variables
+*.tfvars
+
+
 # Fichiers de sauvegarde
 *.backup
 *.bak
