@@ -27,7 +27,7 @@ variable "resource_group_name" {
 variable "location" {
   description = "Région Azure dans laquelle déployer les ressources"
   type        = string
-  default     = "canadaeast"
+  default     = "eastus"
 }
 
 # Paramètres réseau
