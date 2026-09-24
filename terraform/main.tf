@@ -139,11 +139,7 @@ resource "azurerm_linux_virtual_machine" "vm" {
       "echo 'Première VM provisionnée avec Terraform !' > /home/${var.admin_username}/bienvenue.txt",
       "chmod 644 /home/${var.admin_username}/bienvenue.txt",
       "sudo apt-get update -y",
-      "sudo apt-get install -y curl unzip",
-      "curl -fsSL https://releases.hashicorp.com/terraform/1.16.0/terraform_1.16.0_linux_amd64.zip -o terraform.zip",
-      "unzip terraform.zip",
-      "sudo mv terraform /usr/local/bin/",
-      "terraform --version"
+      "sudo apt upgrade -y",
     ]
 
     connection {
