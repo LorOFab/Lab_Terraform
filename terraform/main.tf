@@ -159,6 +159,7 @@ resource "azurerm_linux_virtual_machine" "vm" {
       private_key = var.ssh_private_key
       host        = azurerm_public_ip.public_ip.ip_address
     }
+  }
   
 
 
