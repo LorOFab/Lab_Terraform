@@ -1,10 +1,4 @@
 
-# Groupe de ressources principal
-
-resource "azurerm_resource_group" "rg" {
-  name     = var.resource_group_name
-  location = var.location
-}
 
 
 # Réseau virtuel principal
@@ -13,7 +7,7 @@ resource "azurerm_virtual_network" "vnet" {
   name                = "${var.vm_name}-vnet"
   address_space       = var.vnet_address_space
   location            = var.location
-  resource_group_name = azurerm_resource_group.rg.name
+  resource_group_name = var.resource_group_name
 }
 
 
@@ -33,7 +27,7 @@ resource "azurerm_subnet" "subnet" {
 resource "azurerm_public_ip" "public_ip" {
   name                = "${var.vm_name}-ip"
   location            = var.location
-  resource_group_name = azurerm_resource_group.rg.name
+  resource_group_name = var.resource_group_name
   allocation_method   = "Static"
   sku                 = "Standard"
 }
@@ -46,7 +40,7 @@ resource "azurerm_public_ip" "public_ip" {
 resource "azurerm_network_security_group" "nsg" {
   name                = "${var.vm_name}-nsg"
   location            = var.location
-  resource_group_name = azurerm_resource_group.rg.name
+  resource_group_name = var.resource_group_name
 
   security_rule {
     name                       = "Allow_SSH"
@@ -103,7 +97,7 @@ resource "azurerm_network_security_group" "nsg" {
 resource "azurerm_network_interface" "nic" {
   name                = "${var.vm_name}-nic"
   location            = var.location
-  resource_group_name = azurerm_resource_group.rg.name
+  resource_group_name = var.resource_group_name
 
   ip_configuration {
     name                          = "ipconfig1"
@@ -128,7 +122,7 @@ resource "azurerm_network_interface_security_group_association" "nsg_assoc" {
 resource "azurerm_linux_virtual_machine" "vm" {
   name                  = var.vm_name
   location              = var.location
-  resource_group_name   = azurerm_resource_group.rg.name
+  resource_group_name   = var.resource_group_name
   size                  = var.vm_size
   network_interface_ids = [azurerm_network_interface.nic.id]
   admin_username        = var.admin_username
