@@ -54,7 +54,11 @@ terraform validate
 terraform plan
 terraform apply
 ```
+
+## Ressources ajoutées au groupe de ressources Azure préexistant
+
 <img width="952" height="646" alt="image" src="https://github.com/user-attachments/assets/9957f638-6c8a-49a8-b5a3-322a95531765" />
+
 
 
 Après le déploiement, afficher les valeurs de sortie et se connecter à la VM avec la clé privée correspondant à la clé publique configurée :
