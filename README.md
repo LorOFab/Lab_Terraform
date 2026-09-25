@@ -74,7 +74,7 @@ terraform destroy
 - Déployer des ressources réseau et une VM sur Azure.
 - Adapter une configuration IaC aux contraintes d’une sandbox.
 - Utiliser Git pour versionner la configuration sans publier les variables sensibles.
-- Suivre le cycle `plan` → `apply` → vérification → `destroy`.
+- Suivre le cycle `init` → `plan` → `apply` → vérification → `destroy`.
 
 ## Référence
 
