@@ -57,7 +57,9 @@ terraform apply
 
 ## Ressources ajoutées au groupe de ressources Azure préexistant
 
-<img width="952" height="646" alt="image" src="https://github.com/user-attachments/assets/9957f638-6c8a-49a8-b5a3-322a95531765" />
+
+<img width="1171" height="665" alt="image" src="https://github.com/user-attachments/assets/e9f3e6b8-fceb-43be-a521-b84953f13f6d" />
+
 
 
 
